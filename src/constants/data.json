@@ -1,57 +1,427 @@
 [
   {
-    "name": "Pikachu",
-    "id": 25,
+    "name": "Bulbasaur",
+    "id": 1,
     "hints": [
-      "Yellow rodent with red cheeks",
-      "Mascot of the franchise",
-      "Ash's best friend",
-      "Thunderbolt is its signature move"
+      "Quadrupedal creature with a bulb on its back",
+      "Its body is a combination of blue and green tones",
+      "Has red eyes and pointed, cat-like ears",
+      "The bulb on its back looks like a large seed or plant",
+      "Its skin is dotted with darker green spots",
+      "Short, stubby legs with small, clawed toes",
+      "Plant Pokémon with a Grass/Poison typing",
+      "The bulb grows as it gains experience and evolves",
+      "One of the starter Pokémon from Kanto region",
+      "First entry in the Pokédex"
     ],
-    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+  },
+  {
+    "name": "Ivysaur",
+    "id": 2,
+    "hints": [
+      "The bulb on its back has grown into a flower bud",
+      "Blue-green skin similar to Bulbasaur, but darker",
+      "Its legs are more muscular compared to its pre-evolution",
+      "Small tusks are visible on the corners of its mouth",
+      "Sharp, pointed leaves surround the bud on its back",
+      "It walks on all fours but appears more robust and aggressive",
+      "The bud is on the verge of blooming into a large flower",
+      "Eyes remain red with a piercing gaze",
+      "Known for its Grass/Poison type attacks",
+      "Intermediate evolution in the Bulbasaur line"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png"
+  },
+  {
+    "name": "Venusaur",
+    "id": 3,
+    "hints": [
+      "Massive Pokémon with a full blooming flower on its back",
+      "Flower resembles a palm tree with large leaves",
+      "Its skin is a darker shade of blue-green with spots",
+      "Broad, flat body with heavy legs and claws",
+      "The flower on its back is a vibrant red with white spots",
+      "Petals are surrounded by a crown of broad green leaves",
+      "Two long, sharp teeth are visible on its lower jaw",
+      "Known for its ability to manipulate sunlight",
+      "Final evolution of Bulbasaur",
+      "Its weight and flower give it a sluggish appearance"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png"
+  },
+  {
+    "name": "Charmander",
+    "id": 4,
+    "hints": [
+      "Small, bipedal lizard with an orange body",
+      "A flame burns at the tip of its tail",
+      "Has a yellow underbelly and light blue eyes",
+      "Its hands and feet are small with clawed digits",
+      "Known for its cheerful yet determined expression",
+      "The flame on its tail represents its life force",
+      "As it evolves, the flame grows larger",
+      "It is often seen looking up at its trainer with loyalty",
+      "Its fire-based moves become more powerful as it grows",
+      "Starter Pokémon from the Kanto region"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+  },
+  {
+    "name": "Charmeleon",
+    "id": 5,
+    "hints": [
+      "Orange, bipedal lizard with a more aggressive appearance",
+      "Its flame is larger and more intense than Charmander's",
+      "Its eyes are sharper, and it has a more battle-ready stance",
+      "A single horn protrudes from the back of its head",
+      "Its claws are larger and more prominent",
+      "The flame on its tail is noticeably hotter",
+      "Its body is more muscular, indicating its strength",
+      "It can be seen as a bridge between its two other forms",
+      "Known for its fiery temper",
+      "Intermediate evolution in the Charmander line"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/5.png"
   },
   {
     "name": "Charizard",
     "id": 6,
     "hints": [
-      "Fire-breathing dragon",
-      "Not actually a Dragon-type",
-      "Final form of Charmander",
-      "Ash's most powerful Pokémon"
+      "Large, dragon-like Pokémon with orange scales",
+      "Blue, bat-like wings sprout from its back",
+      "The flame on its tail is massive and burns intensely",
+      "Its mouth is lined with sharp teeth, hinting at its power",
+      "Its wingspan allows it to soar through the skies",
+      "Its eyes are fierce, reflecting its strong will",
+      "Two horn-like structures are visible on its head",
+      "Despite its dragon-like appearance, it is not a Dragon-type",
+      "Known for its destructive fire-based moves",
+      "Final evolution of Charmander"
     ],
     "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
   },
   {
-    "name": "Bulbasaur",
-    "id": 1,
+    "name": "Squirtle",
+    "id": 7,
     "hints": [
-      "Seed Pokémon with a plant bulb",
-      "Grass/Poison type starter",
-      "Number 001 in the Pokédex",
-      "Evolves into Ivysaur"
+      "Small, turtle-like Pokémon with a blue body",
+      "A brown shell with a light-yellow underbelly",
+      "Large, innocent eyes and small ears on the side of its head",
+      "Its limbs are short but end in sharp claws",
+      "Known for its ability to shoot water from its mouth",
+      "Has a cute, yet determined expression",
+      "The tail is curled, resembling a wave or whirlpool",
+      "Its shell is tough, offering it protection in battles",
+      "Starter Water-type Pokémon from Kanto",
+      "The shell grows sturdier as it evolves"
     ],
-    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
   },
   {
-    "name": "Gyarados",
-    "id": 130,
+    "name": "Wartortle",
+    "id": 8,
     "hints": [
-      "Atrocious Pokémon",
-      "Evolves from a weak fish",
-      "Known for its Dragon Rage",
-      "Water/Flying type"
+      "Turtle Pokémon with blue skin and larger, stronger limbs",
+      "Its tail is long and fluffy, resembling ocean waves",
+      "Ears are larger and more pointed compared to Squirtle",
+      "Its shell has become darker and more rugged",
+      "It has a more serious expression, indicating maturity",
+      "The tail helps it swim faster and with more agility",
+      "Its body is muscular, indicating its increased power",
+      "The shell provides added defense in battles",
+      "Intermediate evolution in the Squirtle line",
+      "Its ears and tail are a signature feature of its design"
     ],
-    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png"
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/8.png"
   },
   {
-    "name": "Mewtwo",
-    "id": 150,
+    "name": "Blastoise",
+    "id": 9,
     "hints": [
-      "Genetically engineered Pokémon",
-      "Psychic-type Legendary",
-      "Created from Mew's DNA",
-      "Appeared in the first movie"
+      "Large, turtle-like Pokémon with water cannons on its back",
+      "Its shell is massive and extremely durable",
+      "The cannons are capable of shooting water at high pressure",
+      "Its blue body is thick and muscular, indicating its power",
+      "Short tail and large, clawed feet for stability",
+      "Its eyes are small but fierce, showing its battle readiness",
+      "The cannons retract into its shell when not in use",
+      "Known for its Water-type moves, especially Hydro Pump",
+      "Final evolution of Squirtle",
+      "Its cannons are its most distinct and powerful feature"
     ],
-    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png"
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png"
+  },
+  {
+    "name": "Caterpie",
+    "id": 10,
+    "hints": [
+      "Small, green caterpillar Pokémon with large, innocent eyes",
+      "A red, antenna-like structure on its head",
+      "Yellow, segmented body with suction-like feet",
+      "Small and defenseless but can evolve quickly",
+      "Its skin is smooth, and it moves slowly",
+      "The antenna is used to scare off predators",
+      "Known for its rapid growth and evolution",
+      "One of the weakest Pokémon in battle",
+      "A pure Bug-type Pokémon",
+      "Early-game Pokémon commonly found in forests"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png"
+  },
+  {
+    "name": "Metapod",
+    "id": 11,
+    "hints": [
+      "Green, cocoon-like Pokémon with a hard shell",
+      "Its eyes are barely visible through small slits",
+      "It is completely immobile except for slight movements",
+      "The shell protects its vulnerable body during metamorphosis",
+      "Its body is bent, resembling a crescent or leaf",
+      "Known for its high defense but lack of offensive moves",
+      "A defensive evolution from Caterpie",
+      "It evolves quickly into a much more capable form",
+      "One of the most immobile Pokémon in existence",
+      "It is often found hanging in trees or bushes"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/11.png"
+  },
+  {
+    "name": "Butterfree",
+    "id": 12,
+    "hints": [
+      "Butterfly Pokémon with large, white wings",
+      "Purple body with big red eyes",
+      "Wings have black patterns and are fragile-looking",
+      "It uses its wings to scatter sleep-inducing powders",
+      "Has two thin antennae on its head",
+      "It can fly swiftly and gracefully through the air",
+      "The transformation from Metapod to Butterfree is significant",
+      "Its wings allow it to fly at high altitudes",
+      "Known for its Bug/Flying typing",
+      "Final evolution of Caterpie"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/12.png"
+  },
+  {
+    "name": "Weedle",
+    "id": 13,
+    "hints": [
+      "Small, worm-like Pokémon with a yellow body",
+      "It has a sharp, conical stinger on its head",
+      "Its body is segmented with small, pinkish legs",
+      "A second stinger is found at the end of its tail",
+      "Its head has a pink, round nose that stands out",
+      "Its defense lies in its ability to poison enemies",
+      "Its body is narrow and flexible, allowing it to move easily",
+      "Known for quickly evolving into a cocoon-like state",
+      "A pure Bug/Poison type Pokémon",
+      "Commonly found in forests or grassy areas"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/13.png"
+  },
+  {
+    "name": "Kakuna",
+    "id": 14,
+    "hints": [
+      "Cocoon Pokémon with a yellow, hard outer shell",
+      "Its body is completely immobile, but its eyes show vigilance",
+      "Has a smooth, armored shell that offers strong defense",
+      "It is completely vulnerable in this stage of evolution",
+      "The outer shell is shaped like an angular teardrop",
+      "Despite its immobility, it's ready to evolve at any moment",
+      "The stingers from its previous form are still faintly visible",
+      "It relies on its hard shell for protection from predators",
+      "Evolves quickly into a more dangerous form",
+      "Bug/Poison type like its earlier stage"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/14.png"
+  },
+  {
+    "name": "Beedrill",
+    "id": 15,
+    "hints": [
+      "Large insect Pokémon with three sharp stingers",
+      "Its body is segmented with yellow and black stripes",
+      "It has two long stingers for arms and one at the end of its abdomen",
+      "Its wings are small, allowing it to fly at high speeds",
+      "It has red, aggressive-looking eyes",
+      "Known for its poisonous, needle-like attacks",
+      "Its thin waist connects its upper body to its abdomen",
+      "It is extremely territorial and aggressive in battle",
+      "Bug/Poison type, known for its signature move Twinneedle",
+      "Final evolution of Weedle"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png"
+  },
+  {
+    "name": "Pidgey",
+    "id": 16,
+    "hints": [
+      "Small bird Pokémon with a beige and brown feathered body",
+      "It has a light cream-colored underbelly",
+      "Its wings are broad, though its size is compact",
+      "Has a small beak and sharp black eyes",
+      "Its tail feathers are short but fan out slightly",
+      "Its legs are thin but equipped with sharp talons",
+      "Known for being docile and often fleeing from battle",
+      "Frequently seen flapping its wings to stir up dust",
+      "Normal/Flying type, commonly found in open fields",
+      "One of the most common early-game Pokémon"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png"
+  },
+  {
+    "name": "Pidgeotto",
+    "id": 17,
+    "hints": [
+      "Larger bird Pokémon with red-tipped wings and tail feathers",
+      "Has a prominent crest of red feathers on its head",
+      "Its beak and talons are sharp, used for hunting prey",
+      "Its body is more muscular and streamlined for flying",
+      "The feathers around its neck are cream-colored",
+      "Eyes are sharp, indicating its keen vision and precision",
+      "Known for patrolling its territory in search of prey",
+      "Its wings are broad, allowing for swift flight",
+      "Intermediate evolution in the Pidgey line",
+      "Normal/Flying type, known for its speed"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"
+  },
+  {
+    "name": "Pidgeot",
+    "id": 18,
+    "hints": [
+      "Large bird Pokémon with majestic red and yellow plumage",
+      "Its crest of feathers extends long past its head",
+      "Its wings are powerful, designed for long flights and high speeds",
+      "Beak and talons are sharp, showing its predator nature",
+      "The feathers on its back are brown with cream-colored underbelly",
+      "Tail feathers are red with a pattern of sharp stripes",
+      "Eyes are sharp, giving it a fierce and intimidating appearance",
+      "Known for creating powerful gusts of wind with its wings",
+      "Final evolution of Pidgey, a symbol of strength and grace",
+      "Normal/Flying type, used by experienced trainers"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/18.png"
+  },
+  {
+    "name": "Rattata",
+    "id": 19,
+    "hints": [
+      "Small, purple rodent Pokémon with large front teeth",
+      "Its body is sleek, with short limbs and a long, thin tail",
+      "It has prominent, whisker-like facial hair on each side",
+      "Its sharp teeth grow constantly, making it a powerful biter",
+      "Has a curled tail and pointed ears with cream-colored inside",
+      "It is known for being extremely territorial and aggressive",
+      "The underside of its body is cream-colored",
+      "Known for its speed and tendency to scavenge for food",
+      "Normal type, commonly found in urban areas",
+      "Has an eager, alert expression, ready for action"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/19.png"
+  },
+  {
+    "name": "Raticate",
+    "id": 20,
+    "hints": [
+      "Large, brown rodent Pokémon with massive front teeth",
+      "Its body is more robust and muscular than Rattata",
+      "Whiskers are long and bristle-like, flaring outward from its face",
+      "Its large incisors are sharp and continuously growing",
+      "Tail is long, thick, and scaly",
+      "Its ears are pointed and more pronounced",
+      "Known for its ferocity and quick temper",
+      "It stands on two legs, with powerful hind legs for jumping",
+      "Normal type, commonly seen in battle for its biting attacks",
+      "Final evolution of Rattata"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/20.png"
+  },
+  {
+    "name": "Spearow",
+    "id": 21,
+    "hints": [
+      "Small bird Pokémon with brown feathers and a fierce expression",
+      "Its wings are short and pointed, but it flies swiftly",
+      "Beak is small but sharp, ideal for pecking",
+      "Tail feathers are short but sharply fanned out",
+      "Its eyes are aggressive and narrow, reflecting its temper",
+      "It has talons that help it grip onto branches or prey",
+      "Known for being much more aggressive than Pidgey",
+      "Often attacks in flocks when provoked",
+      "Normal/Flying type, known for its loud cry",
+      "One of the first bird Pokémon encountered early in the games"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/21.png"
+  },
+  {
+    "name": "Fearow",
+    "id": 22,
+    "hints": [
+      "Large bird Pokémon with a long neck and sharp beak",
+      "Its wings are broad and designed for long-distance flight",
+      "The plumage on its body is mostly brown with a lighter underbelly",
+      "Has a large, spear-like beak that it uses to pierce its prey",
+      "Its eyes are sharp and vigilant, suited for high-altitude flight",
+      "Tail feathers are long and fan out like a sharp blade",
+      "The crest on its head gives it a regal appearance",
+      "It flies at great heights, scanning for targets below",
+      "Known for its Normal/Flying typing and speed",
+      "Final evolution of Spearow"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/22.png"
+  },
+  {
+    "name": "Ekans",
+    "id": 23,
+    "hints": [
+      "Snake Pokémon with a purple, coiled body",
+      "Its body is segmented with pale yellow bands",
+      "It has narrow, predatory eyes and a flicking tongue",
+      "Known for its silent, slithering movements",
+      "Its long, flexible body helps it squeeze its prey",
+      "The underside of its body is a lighter shade than the top",
+      "Has a small, pointed head with fangs for injecting poison",
+      "It often hides in tall grass to ambush prey",
+      "Poison-type Pokémon known for its constricting abilities",
+      "Its name is 'snake' spelled backward"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/23.png"
+  },
+  {
+    "name": "Arbok",
+    "id": 24,
+    "hints": [
+      "Cobra Pokémon with a menacing hood pattern",
+      "Its body is long and muscular, designed for squeezing prey",
+      "Has an intimidating hood with a face-like pattern",
+      "The pattern on its hood changes depending on the region",
+      "It has piercing red eyes and sharp fangs for delivering venom",
+      "Its body is mainly purple, with the underside being lighter",
+      "Known for its ability to paralyze prey with a glance",
+      "Slithers silently but can strike quickly when provoked",
+      "Poison-type Pokémon, feared for its strength",
+      "Final evolution of Ekans"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png"
+  },
+  {
+    "name": "Pikachu",
+    "id": 25,
+    "hints": [
+      "Yellow rodent Pokémon with red electric sacs on its cheeks",
+      "Its long ears have black tips",
+      "It has a lightning bolt-shaped tail",
+      "Its fur is sleek and designed to store electricity",
+      "Known for its playful and curious demeanor",
+      "Can generate electric attacks from its cheeks",
+      "Its small size and agile movements make it hard to catch",
+      "Loves to eat berries and prefers living near forests",
+      "Electric-type Pokémon known for its Thunderbolt move",
+      "Evolves from Pichu and evolves into Raichu"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
   }
 ]

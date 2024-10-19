@@ -2,6 +2,7 @@ import { View } from 'react-native';
 
 import { Pressable } from '@/components/Pressable';
 import { Text } from '@/components/Text';
+import { cn } from '@/utils/cn';
 
 type KeyboardProps = {
   onPress: (letter: string) => void;
@@ -15,15 +16,24 @@ export const Keyboard = ({ onPress }: KeyboardProps) => {
   ];
 
   return (
-    <View className='items-center justify-center rounded-3xl bg-white/80 py-2 shadow-sm dark:bg-neutral-900'>
+    <View className='items-center justify-center gap-y-2 rounded-3xl bg-white/80 p-2 shadow-sm web:mb-4 dark:bg-neutral-900'>
       {keys.map((row, i) => (
-        <View key={i} className='mb-2 flex-row justify-center'>
+        <View key={i} className='flex-row justify-center'>
           {row.map(letter => (
             <Pressable
               onPress={() => onPress(letter)}
               key={letter}
-              className='m-1 size-10 items-center justify-center rounded-xl bg-white shadow-sm transition duration-200 active:scale-95 active:bg-indigo-100 disabled:opacity-50 dark:bg-neutral-600 dark:active:bg-indigo-600'>
-              <Text className='text-2xl font-semibold capitalize text-indigo-600'>
+              className={cn(
+                'm-1 h-12 w-10 items-center justify-center rounded-xl bg-white shadow-sm transition duration-200 active:scale-95 active:bg-indigo-100 disabled:opacity-50 dark:bg-neutral-600 dark:active:bg-indigo-600',
+                letter === '←'
+                  ? 'bg-red-500 active:bg-red-600 dark:bg-red-600 dark:active:bg-red-700'
+                  : ''
+              )}>
+              <Text
+                className={cn(
+                  'text-2xl font-semibold capitalize text-indigo-600',
+                  letter === '←' ? 'text-white' : ''
+                )}>
                 {letter}
               </Text>
             </Pressable>

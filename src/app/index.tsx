@@ -8,6 +8,7 @@ import { Keyboard } from '@/components/Keyboard';
 import { SafeAreaView } from '@/components/SafeAreaView';
 import { Text } from '@/components/Text';
 import pokemonData from '@/constants/data.json';
+import { cn } from '@/utils/cn';
 
 const MAX_POKEMON_NAME_LENGTH = Math.max(
   ...pokemonData.map(pokemon => pokemon.name.length)
@@ -30,21 +31,23 @@ const GuessDisplay = ({
         guess.split('').map((letter, index) => (
           <View
             key={index}
-            className={`size-10 items-center justify-center border-b-2 ${
+            className={cn(
+              'size-10 items-center justify-center border-b-2',
               isCorrect
                 ? 'border-green-500'
                 : gameOver
                   ? 'border-red-500'
                   : 'border-indigo-300'
-            }`}>
+            )}>
             <Text
-              className={`text-4xl font-bold capitalize ${
+              className={cn(
+                'text-4xl font-bold capitalize',
                 isCorrect
                   ? 'text-green-600'
                   : gameOver
                     ? 'text-red-600'
                     : 'text-indigo-600'
-              }`}>
+              )}>
               {letter}
             </Text>
           </View>

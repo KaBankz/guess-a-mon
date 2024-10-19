@@ -1,6 +1,8 @@
-import { Keyboard } from '@/components/Keyboard';
 import { Text, View } from 'react-native';
+
 import { SafeAreaView } from 'react-native-safe-area-context';
+
+import { Keyboard } from '@/components/Keyboard';
 
 export default function Index() {
   return (
@@ -10,13 +12,12 @@ export default function Index() {
           flex: 1,
           justifyContent: 'space-between',
           alignItems: 'center',
-        }}
-      >
+        }}>
         <View>
-          <Text style={{ fontSize: 40 }}>{'"'}</Text>
+          <Text style={{ fontSize: 40 }}>'"'</Text>
           <Text style={{ fontSize: 32 }}>It has fangs</Text>
           <Text style={{ fontSize: 32 }}>It has ugly pink lips</Text>
-          <Text style={{ fontSize: 40 }}>{'"'}</Text>
+          <Text style={{ fontSize: 40 }}>'"'</Text>
         </View>
         <View style={{ gap: 8, alignItems: 'flex-end' }}>
           {['S', 'E', 'A', 'K', 'I', 'N', 'G', 'G', 'G', 'G'].map(

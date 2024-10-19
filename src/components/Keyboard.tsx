@@ -11,7 +11,7 @@ export const Keyboard = () => {
     <View style={{ alignItems: 'center', gap: 8 }}>
       {keys.map((row, i) => (
         <View key={i} style={{ flexDirection: 'row', gap: 8 }}>
-          {row.map((letter) => (
+          {row.map(letter => (
             <KeyboardKey key={letter} letter={letter} />
           ))}
         </View>
@@ -27,15 +27,13 @@ const KeyboardKey = ({ letter }: { letter: string }) => {
         backgroundColor: '#accentBackground',
         padding: 8,
         borderRadius: 5,
-      }}
-    >
+      }}>
       <Text
         style={{
           textTransform: 'capitalize',
           fontSize: 16,
           fontWeight: 'bold',
-        }}
-      >
+        }}>
         {letter}
       </Text>
     </Pressable>

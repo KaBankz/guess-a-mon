@@ -1,8 +1,6 @@
-import { Text as RNText } from 'react-native';
+import { Text as RNText, type TextProps } from 'react-native';
 
 import { cn } from '@/utils/cn';
-
-import type { TextProps } from 'react-native';
 
 /**
  * Theme aware `Text` component

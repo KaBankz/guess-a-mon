@@ -1,9 +1,13 @@
 import { forwardRef, useCallback } from 'react';
-import { Platform, Pressable as RNPressable } from 'react-native';
+import {
+  Platform,
+  Pressable as RNPressable,
+  type GestureResponderEvent,
+  type PressableProps,
+  type View,
+} from 'react-native';
 
 import * as Haptics from 'expo-haptics';
-
-import type { GestureResponderEvent, PressableProps, View } from 'react-native';
 
 export const Pressable = forwardRef<View, PressableProps>(
   ({ onPressIn, ...props }, ref) => {

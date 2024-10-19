@@ -3,3 +3,4 @@ allowCompoundWords: true
 useGitignore: true
 words:
   - clsx
+  - ianvs

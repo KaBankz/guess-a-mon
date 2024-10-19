@@ -112,7 +112,7 @@ export default function Index() {
   };
 
   return (
-    <SafeAreaView className='flex-1 bg-white dark:bg-black'>
+    <SafeAreaView className='flex-1 bg-white web:my-4 dark:bg-black'>
       <Text className='mb-8 text-center text-4xl font-extrabold text-indigo-600 dark:text-indigo-400'>
         Guess<Text className='text-indigo-500 dark:text-indigo-600'>•</Text>a
         <Text className='text-indigo-500 dark:text-indigo-600'>•</Text>MON
@@ -124,28 +124,30 @@ export default function Index() {
           </Text>
         </View>
 
-        {message ? (
-          <Text className='mt-4 text-center text-xl font-semibold text-indigo-600'>
-            {message}
-          </Text>
-        ) : null}
-
-        <View className='mb-8 items-center'>
-          {gameOver ? (
-            <>
-              {!isCorrect ? (
-                <Text className='mb-4 text-2xl font-bold text-indigo-600'>
-                  It was {currentPokemon.name}!
-                </Text>
-              ) : null}
-              <Image
-                source={currentPokemon.artwork}
-                alt={currentPokemon.name}
-                style={{ width: 200, height: 200 }}
-                className='mx-auto mb-4'
-              />
-            </>
+        <View>
+          {message ? (
+            <Text className='mt-4 text-center text-xl font-semibold text-indigo-600'>
+              {message}
+            </Text>
           ) : null}
+
+          <View className='h-64 items-center'>
+            {gameOver ? (
+              <>
+                {!isCorrect ? (
+                  <Text className='mb-4 text-2xl font-bold text-indigo-600'>
+                    It was {currentPokemon.name}!
+                  </Text>
+                ) : null}
+                <Image
+                  source={currentPokemon.artwork}
+                  alt={currentPokemon.name}
+                  style={{ width: 200, height: 200 }}
+                  className='mx-auto mb-4'
+                />
+              </>
+            ) : null}
+          </View>
         </View>
 
         <View className='items-center gap-8'>

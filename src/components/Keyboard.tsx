@@ -24,7 +24,7 @@ export const Keyboard = ({ onPress }: KeyboardProps) => {
               onPress={() => onPress(letter)}
               key={letter}
               className={cn(
-                'm-1 h-12 w-10 items-center justify-center rounded-xl bg-white shadow-sm transition duration-200 active:scale-95 active:bg-indigo-100 disabled:opacity-50 dark:bg-neutral-600 dark:active:bg-indigo-600',
+                'm-1 h-14 w-10 items-center justify-center rounded-xl bg-white shadow-sm transition duration-200 active:scale-95 active:bg-indigo-100 disabled:opacity-50 dark:bg-neutral-600 dark:active:bg-indigo-600',
                 letter === '←'
                   ? 'bg-red-500 active:bg-red-600 dark:bg-red-600 dark:active:bg-red-700'
                   : ''

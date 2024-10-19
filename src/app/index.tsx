@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Image, View } from 'react-native';
+import { View } from 'react-native';
+
+import { Image } from 'expo-image';
 
 import { Keyboard } from '@/components/Keyboard';
 import { Pressable } from '@/components/Pressable';
@@ -181,10 +183,9 @@ export default function Index() {
               </Text>
             )}
             <Image
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${currentPokemon.id}.png`}
+              source={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${currentPokemon.id}.png`}
               alt={currentPokemon.name}
-              width={200}
-              height={200}
+              style={{ width: 200, height: 200 }}
               className='mx-auto mb-4'
             />
             <Pressable

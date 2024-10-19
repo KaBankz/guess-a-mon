@@ -1,10 +1,12 @@
-// Learn more https://docs.expo.io/guides/customizing-metro
+/* eslint-env node */
 const { getDefaultConfig } = require('expo/metro-config');
+const { withNativeWind } = require('nativewind/metro');
 
-/** @type {import('expo/metro-config').MetroConfig} */
-const config = getDefaultConfig(__dirname, {
-  // [Web-only]: Enables CSS support in Metro.
-  isCSSEnabled: true,
+const config = getDefaultConfig(__dirname);
+
+const nativeWindConfig = withNativeWind(config, {
+  input: './src/global.css',
+  configPath: './tailwind.config.ts',
 });
 
-module.exports = config;
+module.exports = nativeWindConfig;

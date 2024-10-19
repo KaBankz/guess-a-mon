@@ -3,12 +3,18 @@
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
-    "start": "expo run",
-    "android": "expo run:android",
+    "start": "expo start",
     "ios": "expo run:ios",
+    "android": "expo run:android",
     "web": "expo start --web",
-    "test": "jest --watchAll",
-    "lint": "expo lint"
+    "clean": "git clean -xdf .expo ios android dist public",
+    "nuke": "git clean -xdf .expo ios android dist public node_modules",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "spellcheck": "cspell lint .",
+    "typecheck": "tsc"
   },
   "jest": {
     "preset": "jest-expo"
@@ -37,11 +43,18 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@types/jest": "^29.5.12",
     "@types/react": "~18.2.45",
     "@types/react-test-renderer": "^18.0.7",
+    "cspell": "^8.15.4",
+    "eslint": "8.57.1",
+    "eslint-config-universe": "^13.0.0",
+    "eslint-plugin-tailwindcss": "^3.17.5",
     "jest": "^29.2.1",
     "jest-expo": "~51.0.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
   },

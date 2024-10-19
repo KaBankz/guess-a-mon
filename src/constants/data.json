@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Pikachu",
+    "id": 25,
+    "hints": [
+      "Yellow rodent with red cheeks",
+      "Mascot of the franchise",
+      "Ash's best friend",
+      "Thunderbolt is its signature move"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+  },
+  {
+    "name": "Charizard",
+    "id": 6,
+    "hints": [
+      "Fire-breathing dragon",
+      "Not actually a Dragon-type",
+      "Final form of Charmander",
+      "Ash's most powerful Pokémon"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+  },
+  {
+    "name": "Bulbasaur",
+    "id": 1,
+    "hints": [
+      "Seed Pokémon with a plant bulb",
+      "Grass/Poison type starter",
+      "Number 001 in the Pokédex",
+      "Evolves into Ivysaur"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+  },
+  {
+    "name": "Gyarados",
+    "id": 130,
+    "hints": [
+      "Atrocious Pokémon",
+      "Evolves from a weak fish",
+      "Known for its Dragon Rage",
+      "Water/Flying type"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png"
+  },
+  {
+    "name": "Mewtwo",
+    "id": 150,
+    "hints": [
+      "Genetically engineered Pokémon",
+      "Psychic-type Legendary",
+      "Created from Mew's DNA",
+      "Appeared in the first movie"
+    ],
+    "artwork": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png"
+  }
+]

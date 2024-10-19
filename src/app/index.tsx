@@ -7,59 +7,7 @@ import { Keyboard } from '@/components/Keyboard';
 import { Pressable } from '@/components/Pressable';
 import { SafeAreaView } from '@/components/SafeAreaView';
 import { Text } from '@/components/Text';
-
-const pokemonData = [
-  {
-    name: 'Pikachu',
-    id: 25,
-    hints: [
-      'Yellow rodent with red cheeks',
-      'Mascot of the franchise',
-      "Ash's best friend",
-      'Thunderbolt is its signature move',
-    ],
-  },
-  {
-    name: 'Charizard',
-    id: 6,
-    hints: [
-      'Fire-breathing dragon',
-      'Not actually a Dragon-type',
-      'Final form of Charmander',
-      "Ash's most powerful Pokémon",
-    ],
-  },
-  {
-    name: 'Bulbasaur',
-    id: 1,
-    hints: [
-      'Seed Pokémon with a plant bulb',
-      'Grass/Poison type starter',
-      'Number 001 in the Pokédex',
-      'Evolves into Ivysaur',
-    ],
-  },
-  {
-    name: 'Gyarados',
-    id: 130,
-    hints: [
-      'Atrocious Pokémon',
-      'Evolves from a weak fish',
-      'Known for its Dragon Rage',
-      'Water/Flying type',
-    ],
-  },
-  {
-    name: 'Mewtwo',
-    id: 150,
-    hints: [
-      'Genetically engineered Pokémon',
-      'Psychic-type Legendary',
-      "Created from Mew's DNA",
-      'Appeared in the first movie',
-    ],
-  },
-];
+import pokemonData from '@/constants/data.json';
 
 const MAX_POKEMON_NAME_LENGTH = Math.max(
   ...pokemonData.map(pokemon => pokemon.name.length)
@@ -183,7 +131,7 @@ export default function Index() {
               </Text>
             )}
             <Image
-              source={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${currentPokemon.id}.png`}
+              source={currentPokemon.artwork}
               alt={currentPokemon.name}
               style={{ width: 200, height: 200 }}
               className='mx-auto mb-4'

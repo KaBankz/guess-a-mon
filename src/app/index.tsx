@@ -113,9 +113,9 @@ export default function Index() {
 
   return (
     <SafeAreaView className='flex-1 bg-white dark:bg-black'>
-      <Text className='mb-8 text-center text-4xl font-extrabold text-indigo-600'>
-        Guess<Text className='text-indigo-500'>•</Text>a
-        <Text className='text-indigo-500'>•</Text>MON
+      <Text className='mb-8 text-center text-4xl font-extrabold text-indigo-600 dark:text-indigo-400'>
+        Guess<Text className='text-indigo-500 dark:text-indigo-600'>•</Text>a
+        <Text className='text-indigo-500 dark:text-indigo-600'>•</Text>MON
       </Text>
       <View className='flex-1 items-center justify-between'>
         <View className='mb-8 w-full max-w-md rounded-3xl bg-white p-8 shadow-sm dark:bg-neutral-900'>
@@ -124,45 +124,56 @@ export default function Index() {
           </Text>
         </View>
 
-        <GuessDisplay guess={guess} isCorrect={isCorrect} gameOver={gameOver} />
-
-        {gameOver ? (
-          <View className='mb-8 items-center'>
-            {!isCorrect ? (
-              <Text className='mb-4 text-2xl font-bold text-indigo-600'>
-                It was {currentPokemon.name}!
-              </Text>
-            ) : null}
-            <Image
-              source={currentPokemon.artwork}
-              alt={currentPokemon.name}
-              style={{ width: 200, height: 200 }}
-              className='mx-auto mb-4'
-            />
-            <Button text='Play Again' onPress={startNewGame} />
-          </View>
-        ) : null}
-
         {message ? (
-          <Text className='mt-4 text-center text-lg font-semibold text-indigo-600'>
+          <Text className='mt-4 text-center text-xl font-semibold text-indigo-600'>
             {message}
           </Text>
         ) : null}
 
-        <View className='items-center gap-4'>
-          <View className='flex-row gap-2'>
-            <Button
-              text='Guess'
-              onPress={handleGuess}
-              disabled={gameOver || guess.length === 0}
-            />
+        <View className='mb-8 items-center'>
+          {gameOver ? (
+            <>
+              {!isCorrect ? (
+                <Text className='mb-4 text-2xl font-bold text-indigo-600'>
+                  It was {currentPokemon.name}!
+                </Text>
+              ) : null}
+              <Image
+                source={currentPokemon.artwork}
+                alt={currentPokemon.name}
+                style={{ width: 200, height: 200 }}
+                className='mx-auto mb-4'
+              />
+            </>
+          ) : null}
+        </View>
 
-            <Button
-              variant='outline'
-              text='Give Up'
-              onPress={handleGiveUp}
-              disabled={gameOver}
-            />
+        <View className='items-center gap-8'>
+          <GuessDisplay
+            guess={guess}
+            isCorrect={isCorrect}
+            gameOver={gameOver}
+          />
+
+          <View className='flex-row gap-2'>
+            {!gameOver ? (
+              <>
+                <Button
+                  text='Guess'
+                  onPress={handleGuess}
+                  disabled={gameOver || guess.length === 0}
+                />
+
+                <Button
+                  variant='outline'
+                  text='Give Up'
+                  onPress={handleGiveUp}
+                  disabled={gameOver}
+                />
+              </>
+            ) : (
+              <Button text='Play Again' onPress={startNewGame} />
+            )}
           </View>
 
           <Keyboard onPress={letter => handleKeyPress(letter)} />

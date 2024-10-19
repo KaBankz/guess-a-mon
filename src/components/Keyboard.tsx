@@ -16,7 +16,7 @@ export const Keyboard = ({ onPress }: KeyboardProps) => {
   ];
 
   return (
-    <View className='items-center justify-center gap-y-2 rounded-3xl bg-white/80 p-2 shadow-sm web:mb-4 dark:bg-neutral-900'>
+    <View className='items-center justify-center gap-y-2 rounded-3xl bg-white/80 p-2 shadow-sm dark:bg-neutral-900'>
       {keys.map((row, i) => (
         <View key={i} className='flex-row justify-center'>
           {row.map(letter => (

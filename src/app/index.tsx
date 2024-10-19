@@ -1,111 +1,42 @@
+import { Keyboard } from '@/components/Keyboard';
+import { Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Square, Text, XStack, YStack } from 'tamagui';
-import { Keyboard } from '../components/Keyboard';
 
 export default function Index() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <YStack flex={1} justifyContent='space-between' alignItems='center'>
-        <YStack>
-          <Text fontSize='$10'>"</Text>
-          <Text fontSize='$8'>It has fangs</Text>
-          <Text fontSize='$8'>It has ugly pink lips</Text>
-          <Text fontSize='$10'>"</Text>
-        </YStack>
-        <XStack gap='$2' alignItems='flex-end'>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>S</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>E</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>A</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>K</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>I</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>N</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>G</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>G</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>G</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-          <YStack alignItems='center'>
-            <Text fontSize='$9'>G</Text>
-            <Square
-              height='$0.5'
-              width='$2'
-              circular
-              backgroundColor='$color'
-            />
-          </YStack>
-        </XStack>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <View>
+          <Text style={{ fontSize: 40 }}>{'"'}</Text>
+          <Text style={{ fontSize: 32 }}>It has fangs</Text>
+          <Text style={{ fontSize: 32 }}>It has ugly pink lips</Text>
+          <Text style={{ fontSize: 40 }}>{'"'}</Text>
+        </View>
+        <View style={{ gap: 8, alignItems: 'flex-end' }}>
+          {['S', 'E', 'A', 'K', 'I', 'N', 'G', 'G', 'G', 'G'].map(
+            (letter, index) => (
+              <View key={index} style={{ alignItems: 'center' }}>
+                <Text style={{ fontSize: 36 }}>{letter}</Text>
+                <View
+                  style={{
+                    height: 2,
+                    width: 8,
+                    borderRadius: 4,
+                    backgroundColor: '#000',
+                  }}
+                />
+              </View>
+            )
+          )}
+        </View>
         <Keyboard />
-      </YStack>
+      </View>
     </SafeAreaView>
   );
 }

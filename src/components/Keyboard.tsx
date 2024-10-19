@@ -1,4 +1,4 @@
-import { Button, SizableText, XStack, YStack } from 'tamagui';
+import { Pressable, Text, View } from 'react-native';
 
 export const Keyboard = () => {
   const keys = [
@@ -8,24 +8,36 @@ export const Keyboard = () => {
   ];
 
   return (
-    <YStack alignItems='center' gap='$2'>
+    <View style={{ alignItems: 'center', gap: 8 }}>
       {keys.map((row, i) => (
-        <XStack key={i} gap='$2'>
+        <View key={i} style={{ flexDirection: 'row', gap: 8 }}>
           {row.map((letter) => (
             <KeyboardKey key={letter} letter={letter} />
           ))}
-        </XStack>
+        </View>
       ))}
-    </YStack>
+    </View>
   );
 };
 
 const KeyboardKey = ({ letter }: { letter: string }) => {
   return (
-    <Button backgroundColor='$accentBackground' padding='$2' borderRadius='$5'>
-      <SizableText textTransform='capitalize' fontSize='$8' fontWeight='bold'>
+    <Pressable
+      style={{
+        backgroundColor: '#accentBackground',
+        padding: 8,
+        borderRadius: 5,
+      }}
+    >
+      <Text
+        style={{
+          textTransform: 'capitalize',
+          fontSize: 16,
+          fontWeight: 'bold',
+        }}
+      >
         {letter}
-      </SizableText>
-    </Button>
+      </Text>
+    </Pressable>
   );
 };

@@ -1,40 +1,21 @@
 import { Button, SizableText, XStack, YStack } from 'tamagui';
 
 export const Keyboard = () => {
+  const keys = [
+    ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
+    ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
+    ['Z', 'X', 'C', 'V', 'B', 'N', 'M', '←'],
+  ];
+
   return (
     <YStack alignItems='center' gap='$2'>
-      <XStack gap='$2'>
-        <KeyboardKey letter='q' />
-        <KeyboardKey letter='w' />
-        <KeyboardKey letter='e' />
-        <KeyboardKey letter='r' />
-        <KeyboardKey letter='t' />
-        <KeyboardKey letter='y' />
-        <KeyboardKey letter='u' />
-        <KeyboardKey letter='i' />
-        <KeyboardKey letter='o' />
-        <KeyboardKey letter='p' />
-      </XStack>
-      <XStack gap='$2'>
-        <KeyboardKey letter='a' />
-        <KeyboardKey letter='s' />
-        <KeyboardKey letter='d' />
-        <KeyboardKey letter='f' />
-        <KeyboardKey letter='g' />
-        <KeyboardKey letter='h' />
-        <KeyboardKey letter='j' />
-        <KeyboardKey letter='k' />
-        <KeyboardKey letter='l' />
-      </XStack>
-      <XStack gap='$2'>
-        <KeyboardKey letter='z' />
-        <KeyboardKey letter='x' />
-        <KeyboardKey letter='c' />
-        <KeyboardKey letter='v' />
-        <KeyboardKey letter='b' />
-        <KeyboardKey letter='n' />
-        <KeyboardKey letter='m' />
-      </XStack>
+      {keys.map((row, i) => (
+        <XStack key={i} gap='$2'>
+          {row.map((letter) => (
+            <KeyboardKey key={letter} letter={letter} />
+          ))}
+        </XStack>
+      ))}
     </YStack>
   );
 };

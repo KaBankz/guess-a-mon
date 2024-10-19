@@ -1,0 +1,12 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "markdown.extension.toc.omittedFromToc": {
+    "README.md": ["## Table of Contents"]
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["[a-zA-Z]*ClassName={?['\"`]([^'\"`]*)['\"`]}?"],
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    ["twMerge\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
+}

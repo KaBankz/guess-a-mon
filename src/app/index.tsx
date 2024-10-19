@@ -3,8 +3,8 @@ import { View } from 'react-native';
 
 import { Image } from 'expo-image';
 
+import { Button } from '@/components/Button';
 import { Keyboard } from '@/components/Keyboard';
-import { Pressable } from '@/components/Pressable';
 import { SafeAreaView } from '@/components/SafeAreaView';
 import { Text } from '@/components/Text';
 import pokemonData from '@/constants/data.json';
@@ -136,11 +136,7 @@ export default function Index() {
               style={{ width: 200, height: 200 }}
               className='mx-auto mb-4'
             />
-            <Pressable
-              onPress={startNewGame}
-              className='rounded-full bg-indigo-500 px-6 py-2 transition duration-200 active:bg-indigo-600'>
-              <Text className='font-bold text-white'>Play Again</Text>
-            </Pressable>
+            <Button text='Play Again' onPress={startNewGame} />
           </View>
         )}
 
@@ -152,19 +148,18 @@ export default function Index() {
 
         <View className='items-center gap-4'>
           <View className='flex-row gap-2'>
-            <Pressable
+            <Button
+              text='Guess'
               onPress={handleGuess}
               disabled={gameOver || guess.length === 0}
-              className='rounded-full bg-indigo-500 px-6 py-2 transition duration-200 active:bg-indigo-600 disabled:opacity-50'>
-              <Text className='font-bold text-white'>Guess</Text>
-            </Pressable>
+            />
 
-            <Pressable
+            <Button
+              variant='outline'
+              text='Give Up'
               onPress={handleGiveUp}
               disabled={gameOver}
-              className='rounded-full border-2 border-indigo-500 px-6 py-2 transition duration-200 active:bg-indigo-100'>
-              <Text className='font-bold text-indigo-500'>Give Up</Text>
-            </Pressable>
+            />
           </View>
 
           <Keyboard onPress={letter => handleKeyPress(letter)} />

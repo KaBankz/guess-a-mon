@@ -11,9 +11,9 @@ export const Keyboard = () => {
   ];
 
   return (
-    <View style={{ alignItems: 'center', gap: 8 }}>
+    <View className='items-center space-y-2'>
       {keys.map((row, i) => (
-        <View key={i} style={{ flexDirection: 'row', gap: 8 }}>
+        <View key={i} className='flex-row space-x-2'>
           {row.map(letter => (
             <KeyboardKey key={letter} letter={letter} />
           ))}
@@ -25,20 +25,8 @@ export const Keyboard = () => {
 
 const KeyboardKey = ({ letter }: { letter: string }) => {
   return (
-    <Pressable
-      style={{
-        backgroundColor: '#accentBackground',
-        padding: 8,
-        borderRadius: 5,
-      }}>
-      <Text
-        style={{
-          textTransform: 'capitalize',
-          fontSize: 16,
-          fontWeight: 'bold',
-        }}>
-        {letter}
-      </Text>
+    <Pressable className='rounded bg-current p-2'>
+      <Text className='text-lg font-bold capitalize'>{letter}</Text>
     </Pressable>
   );
 };

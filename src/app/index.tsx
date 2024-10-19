@@ -126,13 +126,13 @@ export default function Index() {
 
         <GuessDisplay guess={guess} isCorrect={isCorrect} gameOver={gameOver} />
 
-        {gameOver && (
+        {gameOver ? (
           <View className='mb-8 items-center'>
-            {!isCorrect && (
+            {!isCorrect ? (
               <Text className='mb-4 text-2xl font-bold text-indigo-600'>
                 It was {currentPokemon.name}!
               </Text>
-            )}
+            ) : null}
             <Image
               source={currentPokemon.artwork}
               alt={currentPokemon.name}
@@ -141,13 +141,13 @@ export default function Index() {
             />
             <Button text='Play Again' onPress={startNewGame} />
           </View>
-        )}
+        ) : null}
 
-        {message && (
+        {message ? (
           <Text className='mt-4 text-center text-lg font-semibold text-indigo-600'>
             {message}
           </Text>
-        )}
+        ) : null}
 
         <View className='items-center gap-4'>
           <View className='flex-row gap-2'>

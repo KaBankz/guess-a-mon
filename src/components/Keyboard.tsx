@@ -11,9 +11,9 @@ export const Keyboard = () => {
   ];
 
   return (
-    <View className='items-center space-y-2'>
+    <View className='items-center justify-center rounded-3xl bg-white/80 py-2 shadow-sm'>
       {keys.map((row, i) => (
-        <View key={i} className='flex-row space-x-2'>
+        <View key={i} className='mb-2 flex-row justify-center'>
           {row.map(letter => (
             <KeyboardKey key={letter} letter={letter} />
           ))}
@@ -25,8 +25,10 @@ export const Keyboard = () => {
 
 const KeyboardKey = ({ letter }: { letter: string }) => {
   return (
-    <Pressable className='rounded bg-current p-2'>
-      <Text className='text-lg font-bold capitalize'>{letter}</Text>
+    <Pressable className='m-1 size-10 items-center justify-center rounded-xl bg-white shadow-sm transition duration-200 active:scale-95 active:bg-indigo-100 disabled:opacity-50'>
+      <Text className='text-2xl font-semibold capitalize text-indigo-600'>
+        {letter}
+      </Text>
     </Pressable>
   );
 };

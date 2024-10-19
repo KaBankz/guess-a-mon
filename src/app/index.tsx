@@ -109,13 +109,13 @@ export default function Index() {
   };
 
   return (
-    <SafeAreaView className='flex-1 bg-white'>
+    <SafeAreaView className='flex-1 bg-white dark:bg-black'>
       <Text className='mb-8 text-center text-4xl font-extrabold text-indigo-600'>
         Guess<Text className='text-indigo-500'>•</Text>a
         <Text className='text-indigo-500'>•</Text>MON
       </Text>
       <View className='flex-1 items-center justify-between'>
-        <View className='mb-8 w-full max-w-md rounded-3xl bg-white p-8 shadow-sm'>
+        <View className='mb-8 w-full max-w-md rounded-3xl bg-white p-8 shadow-sm dark:bg-neutral-900'>
           <Text className='text-center font-serif text-2xl italic'>
             " {currentPokemon?.hints[currentHintIndex]} "
           </Text>
@@ -124,7 +124,7 @@ export default function Index() {
         <GuessDisplay guess={guess} isCorrect={isCorrect} gameOver={gameOver} />
 
         {gameOver && (
-          <View className='mb-8 text-center'>
+          <View className='mb-8 items-center'>
             {!isCorrect && (
               <Text className='mb-4 text-2xl font-bold text-indigo-600'>
                 It was {currentPokemon.name}!

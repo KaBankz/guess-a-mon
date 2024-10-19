@@ -1,8 +1,8 @@
-import { Text, View } from 'react-native';
-
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { View } from 'react-native';
 
 import { Keyboard } from '@/components/Keyboard';
+import { SafeAreaView } from '@/components/SafeAreaView';
+import { Text } from '@/components/Text';
 
 export default function Index() {
   return (

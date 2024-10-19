@@ -1,4 +1,7 @@
-import { Pressable, Text, View } from 'react-native';
+import { View } from 'react-native';
+
+import { Pressable } from '@/components/Pressable';
+import { Text } from '@/components/Text';
 
 export const Keyboard = () => {
   const keys = [

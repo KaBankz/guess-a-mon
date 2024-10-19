@@ -8,19 +8,34 @@ const config: ExpoConfig = {
   icon: './src/assets/images/icon.png',
   scheme: 'myapp',
   userInterfaceStyle: 'automatic',
-  splash: {
-    image: './src/assets/images/icon.png',
-    resizeMode: 'contain',
-    backgroundColor: '#ffffff',
-  },
   ios: {
     supportsTablet: true,
     bundleIdentifier: 'com.kabanks.guess-a-mon',
+    splash: {
+      image: './src/assets/images/splash_light.png',
+      resizeMode: 'contain',
+      backgroundColor: '#ffffff',
+      dark: {
+        image: './src/assets/images/splash_dark.png',
+        resizeMode: 'contain',
+        backgroundColor: '#000000',
+      },
+    },
   },
   android: {
     adaptiveIcon: {
       foregroundImage: './src/assets/images/icon.png',
       backgroundColor: '#ffffff',
+    },
+    splash: {
+      image: './src/assets/images/splash_light.png',
+      resizeMode: 'contain',
+      backgroundColor: '#ffffff',
+      dark: {
+        image: './src/assets/images/splash_dark.png',
+        resizeMode: 'contain',
+        backgroundColor: '#000000',
+      },
     },
   },
   web: {

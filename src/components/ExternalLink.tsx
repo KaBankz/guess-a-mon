@@ -6,11 +6,15 @@ import { openBrowserAsync } from 'expo-web-browser';
 
 type Props = Omit<ComponentProps<typeof Link>, 'href'> & { href: string };
 
+/**
+ * Open external links in an in-app browser on native platforms.
+ */
 export function ExternalLink({ href, ...rest }: Props) {
   return (
     <Link
-      target='_blank'
       {...rest}
+      target='_blank'
+      // @ts-expect-error: `href` accepts a string or object, but we only want to support strings.
       href={href}
       onPress={async event => {
         if (Platform.OS !== 'web') {

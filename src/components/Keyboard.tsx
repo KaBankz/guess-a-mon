@@ -8,6 +8,9 @@ type KeyboardProps = {
   onPress: (letter: string) => void;
 };
 
+/**
+ * On-screen keyboard component.
+ */
 export const Keyboard = ({ onPress }: KeyboardProps) => {
   const keys = [
     ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],

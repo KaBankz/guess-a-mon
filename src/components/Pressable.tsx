@@ -9,6 +9,9 @@ import {
 
 import * as Haptics from 'expo-haptics';
 
+/**
+ * Pressable component with haptic feedback
+ */
 export const Pressable = forwardRef<View, PressableProps>(
   ({ onPressIn, ...props }, ref) => {
     const onPressInHandler = useCallback(

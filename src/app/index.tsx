@@ -5,6 +5,7 @@ import { Image } from 'expo-image';
 
 import { Button } from '@/components/Button';
 import { GuessDisplay } from '@/components/GuessDisplay';
+import { HintCard } from '@/components/HintCard';
 import { Keyboard } from '@/components/Keyboard';
 import { SafeAreaView } from '@/components/SafeAreaView';
 import { Text } from '@/components/Text';
@@ -69,17 +70,14 @@ export default function Index() {
   };
 
   return (
-    <SafeAreaView className='flex-1 bg-white web:my-4 dark:bg-black'>
+    <SafeAreaView className='flex-1 web:my-4 web:overflow-scroll'>
       <Text className='mb-8 text-center text-4xl font-extrabold text-indigo-600 dark:text-indigo-400'>
         Guess<Text className='text-indigo-500 dark:text-indigo-600'>•</Text>a
         <Text className='text-indigo-500 dark:text-indigo-600'>•</Text>MON
       </Text>
+
       <View className='flex-1 items-center justify-between'>
-        <View className='mb-8 w-full max-w-md rounded-3xl bg-white p-8 shadow-sm dark:bg-neutral-900'>
-          <Text className='text-center font-serif text-2xl italic'>
-            " {currentPokemon?.hints[currentHintIndex]} "
-          </Text>
-        </View>
+        <HintCard hint={currentPokemon?.hints[currentHintIndex]} />
 
         <View>
           {message ? (

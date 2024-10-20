@@ -6,7 +6,7 @@ const config: ExpoConfig = {
   version: '1.0.0',
   orientation: 'portrait',
   icon: './src/assets/images/icon.png',
-  scheme: 'myapp',
+  scheme: 'guessamon',
   userInterfaceStyle: 'automatic',
   ios: {
     supportsTablet: true,

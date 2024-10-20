@@ -83,7 +83,7 @@ export default function Index() {
       </Text>
 
       <View className='flex-1 items-center justify-between'>
-        <HintCard hint={currentPokemon?.hints[currentHintIndex]} />
+        <HintCard hint={currentPokemon?.hints[currentHintIndex]!} />
 
         {message ? (
           <Text className='mt-4 text-center text-xl font-semibold text-indigo-600'>

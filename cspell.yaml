@@ -4,4 +4,5 @@ useGitignore: true
 words:
   - clsx
   - ianvs
+  - kabanks
   - zustand

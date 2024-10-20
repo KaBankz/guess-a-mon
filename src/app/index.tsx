@@ -9,14 +9,17 @@ import { HintCard } from '@/components/HintCard';
 import { Keyboard } from '@/components/Keyboard';
 import { SafeAreaView } from '@/components/SafeAreaView';
 import { Text } from '@/components/Text';
-import pokemonData from '@/constants/data.json';
+import rawPokemonData from '@/constants/data.json';
+import type { Pokemon } from '@/types/Pokemon';
+
+const pokemonData = rawPokemonData as Pokemon[];
 
 const MAX_POKEMON_NAME_LENGTH = Math.max(
   ...pokemonData.map(pokemon => pokemon.name.length)
 );
 
 export default function Index() {
-  const [currentPokemon, setCurrentPokemon] = useState(null);
+  const [currentPokemon, setCurrentPokemon] = useState<Pokemon>();
   const [currentHintIndex, setCurrentHintIndex] = useState(0);
   const [guess, setGuess] = useState('');
   const [message, setMessage] = useState('');
@@ -39,13 +42,13 @@ export default function Index() {
   };
 
   const handleGuess = () => {
-    if (guess.toLowerCase() === currentPokemon.name.toLowerCase()) {
+    if (guess.toLowerCase() === currentPokemon?.name.toLowerCase()) {
       setMessage(`Correct! It's ${currentPokemon.name}!`);
       setGameOver(true);
       setIsCorrect(true);
     } else {
       setMessage('Incorrect. Try again!');
-      if (currentHintIndex < currentPokemon.hints.length - 1) {
+      if (currentHintIndex < currentPokemon?.hints.length - 1) {
         setCurrentHintIndex(currentHintIndex + 1);
       }
     }
@@ -91,12 +94,12 @@ export default function Index() {
               <>
                 {!isCorrect ? (
                   <Text className='mb-4 text-2xl font-bold text-indigo-600'>
-                    It was {currentPokemon.name}!
+                    It was {currentPokemon?.name}!
                   </Text>
                 ) : null}
                 <Image
-                  source={currentPokemon.artwork}
-                  alt={currentPokemon.name}
+                  source={currentPokemon?.artwork}
+                  alt={currentPokemon?.name}
                   style={{ width: 200, height: 200 }}
                   className='mx-auto mb-4'
                 />

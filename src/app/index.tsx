@@ -12,11 +12,9 @@ import { Text } from '@/components/Text';
 import rawPokemonData from '@/constants/data.json';
 import type { Pokemon } from '@/types/Pokemon';
 
-const pokemonData = rawPokemonData as Pokemon[];
+const pokemonData: Pokemon[] = rawPokemonData;
 
-const MAX_POKEMON_NAME_LENGTH = Math.max(
-  ...pokemonData.map(pokemon => pokemon.name.length)
-);
+const MAX_POKEMON_NAME_LENGTH = 12;
 
 export default function Index() {
   const [currentPokemon, setCurrentPokemon] = useState<Pokemon>();
@@ -43,11 +41,11 @@ export default function Index() {
 
   const handleGuess = () => {
     if (guess.toLowerCase() === currentPokemon?.name.toLowerCase()) {
-      setMessage(`Correct! It's ${currentPokemon.name}!`);
+      setMessage('Correct!');
       setGameOver(true);
       setIsCorrect(true);
     } else {
-      setMessage('Incorrect. Try again!');
+      setMessage('Nope, Try again!');
       if (currentHintIndex < currentPokemon?.hints.length - 1) {
         setCurrentHintIndex(currentHintIndex + 1);
       }
@@ -55,12 +53,13 @@ export default function Index() {
   };
 
   const handleGiveUp = () => {
-    setMessage('Better luck next time!');
+    setMessage('Ha Ha! LOSER!');
     setGameOver(true);
   };
 
   const handleKeyPress = (key: string) => {
     if (gameOver) return;
+
     if (key === '←') {
       handleBackspace();
     } else if (guess.length < MAX_POKEMON_NAME_LENGTH) {
@@ -82,30 +81,28 @@ export default function Index() {
       <View className='flex-1 items-center justify-between'>
         <HintCard hint={currentPokemon?.hints[currentHintIndex]} />
 
-        <View>
-          {message ? (
-            <Text className='mt-4 text-center text-xl font-semibold text-indigo-600'>
-              {message}
-            </Text>
-          ) : null}
+        {message ? (
+          <Text className='mt-4 text-center text-xl font-semibold text-indigo-600'>
+            {message}
+          </Text>
+        ) : null}
 
-          <View className='h-64 items-center'>
-            {gameOver ? (
-              <>
-                {!isCorrect ? (
-                  <Text className='mb-4 text-2xl font-bold text-indigo-600'>
-                    It was {currentPokemon?.name}!
-                  </Text>
-                ) : null}
-                <Image
-                  source={currentPokemon?.artwork}
-                  alt={currentPokemon?.name}
-                  style={{ width: 200, height: 200 }}
-                  className='mx-auto mb-4'
-                />
-              </>
-            ) : null}
-          </View>
+        <View className='h-64 items-center'>
+          {gameOver ? (
+            <>
+              {!isCorrect ? (
+                <Text className='mb-4 text-2xl font-bold text-indigo-600'>
+                  It was {currentPokemon?.name}!
+                </Text>
+              ) : null}
+              <Image
+                source={currentPokemon?.artwork}
+                alt={currentPokemon?.name}
+                style={{ width: 200, height: 200 }}
+                className='mx-auto mb-4'
+              />
+            </>
+          ) : null}
         </View>
 
         <View className='items-center gap-8'>

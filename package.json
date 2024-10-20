@@ -1,7 +1,6 @@
 {
   "name": "guess-a-mon",
   "main": "expo-router/entry",
-  "version": "1.0.0",
   "scripts": {
     "start": "expo start",
     "ios": "expo run:ios",
@@ -66,6 +65,5 @@
     "prettier-plugin-tailwindcss": "^0.6.8",
     "react-test-renderer": "18.2.0",
     "typescript": "~5.3.3"
-  },
-  "private": true
+  }
 }

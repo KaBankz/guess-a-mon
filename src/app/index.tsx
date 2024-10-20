@@ -15,7 +15,7 @@ import { useGameStore } from '@/store/gameStore';
 import type { Pokemon } from '@/types/Pokemon';
 
 const fetchPokemon = async () => {
-  const response = await fetch('http://192.168.0.184:8081/pokemon');
+  const response = await fetch(`${process.env.EXPO_PUBLIC_API_URL}/pokemon`);
 
   if (!response.ok) {
     throw new Error('Failed to fetch Pokémon data');

@@ -93,14 +93,11 @@ export default function Index() {
 
       <View className='flex-1 items-center justify-between'>
         <HintCard hint={currentPokemon?.hints[currentHintIndex]!} />
+        <Text className='mt-4 text-center text-xl font-semibold text-indigo-600'>
+          {message}
+        </Text>
 
-        {message ? (
-          <Text className='mt-4 text-center text-xl font-semibold text-indigo-600'>
-            {message}
-          </Text>
-        ) : null}
-
-        <View className='h-64 items-center'>
+        <View className='grow items-center'>
           {gameOver ? (
             <>
               {!isCorrect ? (
@@ -111,8 +108,7 @@ export default function Index() {
               <Image
                 source={currentPokemon?.artwork}
                 alt={currentPokemon?.name}
-                style={{ width: 200, height: 200 }}
-                className='mx-auto mb-4'
+                style={{ width: 150, height: 150 }}
               />
             </>
           ) : null}

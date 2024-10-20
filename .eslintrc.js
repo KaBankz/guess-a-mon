@@ -7,6 +7,7 @@ const config = {
     'universe/native',
     'universe/shared/typescript-analysis',
     'plugin:tailwindcss/recommended',
+    'plugin:@tanstack/query/recommended',
   ],
   parser: '@typescript-eslint/parser',
   settings: {

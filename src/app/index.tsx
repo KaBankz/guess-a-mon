@@ -4,58 +4,15 @@ import { View } from 'react-native';
 import { Image } from 'expo-image';
 
 import { Button } from '@/components/Button';
+import { GuessDisplay } from '@/components/GuessDisplay';
 import { Keyboard } from '@/components/Keyboard';
 import { SafeAreaView } from '@/components/SafeAreaView';
 import { Text } from '@/components/Text';
 import pokemonData from '@/constants/data.json';
-import { cn } from '@/utils/cn';
 
 const MAX_POKEMON_NAME_LENGTH = Math.max(
   ...pokemonData.map(pokemon => pokemon.name.length)
 );
-
-const GuessDisplay = ({
-  guess,
-  isCorrect,
-  gameOver,
-}: {
-  guess: string;
-  isCorrect: boolean;
-  gameOver: boolean;
-}) => {
-  return (
-    <View className='flex-row items-end gap-2'>
-      {guess.length === 0 && !gameOver ? (
-        <View className='size-10 border-b-2 border-indigo-300' />
-      ) : (
-        guess.split('').map((letter, index) => (
-          <View
-            key={index}
-            className={cn(
-              'size-10 items-center justify-center border-b-2',
-              isCorrect
-                ? 'border-green-500'
-                : gameOver
-                  ? 'border-red-500'
-                  : 'border-indigo-300'
-            )}>
-            <Text
-              className={cn(
-                'text-4xl font-bold capitalize',
-                isCorrect
-                  ? 'text-green-600'
-                  : gameOver
-                    ? 'text-red-600'
-                    : 'text-indigo-600'
-              )}>
-              {letter}
-            </Text>
-          </View>
-        ))
-      )}
-    </View>
-  );
-};
 
 export default function Index() {
   const [currentPokemon, setCurrentPokemon] = useState(null);

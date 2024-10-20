@@ -4,3 +4,4 @@ useGitignore: true
 words:
   - clsx
   - ianvs
+  - zustand

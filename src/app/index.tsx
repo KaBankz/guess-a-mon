@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
-import { View } from 'react-native';
+import { ActivityIndicator, View } from 'react-native';
 
 import { useQuery } from '@tanstack/react-query';
 import { Image } from 'expo-image';
+import * as SplashScreen from 'expo-splash-screen';
 
 import { Button } from '@/components/Button';
 import { GuessDisplay } from '@/components/GuessDisplay';
@@ -25,6 +26,8 @@ const fetchPokemon = async () => {
 
 const MAX_POKEMON_NAME_LENGTH = 12;
 
+SplashScreen.preventAutoHideAsync();
+
 export default function Index() {
   const {
     currentPokemon,
@@ -40,10 +43,16 @@ export default function Index() {
     handleBackspace,
   } = useGameStore();
 
-  const { data, isLoading, error } = useQuery({
+  const { data, isLoading, error, isFetched } = useQuery({
     queryKey: ['pokemon'],
     queryFn: fetchPokemon,
   });
+
+  useEffect(() => {
+    if (isFetched && !isLoading) {
+      SplashScreen.hideAsync();
+    }
+  }, [isFetched, isLoading]);
 
   useEffect(() => {
     if (data) startNewGame(data);
@@ -70,7 +79,7 @@ export default function Index() {
   if (isLoading || !data) {
     return (
       <SafeAreaView className='flex-1 items-center justify-center'>
-        <Text className='text-xl font-bold'>Loading Pokémon data...</Text>
+        <ActivityIndicator />
       </SafeAreaView>
     );
   }

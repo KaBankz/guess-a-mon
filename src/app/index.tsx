@@ -136,7 +136,10 @@ export default function Index() {
             )}
           </View>
 
-          <Keyboard onPress={letter => handleKeyPress(letter)} />
+          <Keyboard
+            onPress={letter => handleKeyPress(letter)}
+            disabled={gameOver}
+          />
         </View>
       </View>
     </SafeAreaView>

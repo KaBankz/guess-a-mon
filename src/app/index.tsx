@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { View } from 'react-native';
 
 import { Image } from 'expo-image';
@@ -10,6 +10,7 @@ import { Keyboard } from '@/components/Keyboard';
 import { SafeAreaView } from '@/components/SafeAreaView';
 import { Text } from '@/components/Text';
 import rawPokemonData from '@/constants/data.json';
+import { useGameStore } from '@/store/gameStore';
 import type { Pokemon } from '@/types/Pokemon';
 
 const pokemonData: Pokemon[] = rawPokemonData;
@@ -17,45 +18,23 @@ const pokemonData: Pokemon[] = rawPokemonData;
 const MAX_POKEMON_NAME_LENGTH = 12;
 
 export default function Index() {
-  const [currentPokemon, setCurrentPokemon] = useState<Pokemon>();
-  const [currentHintIndex, setCurrentHintIndex] = useState(0);
-  const [guess, setGuess] = useState('');
-  const [message, setMessage] = useState('');
-  const [gameOver, setGameOver] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
+  const {
+    currentPokemon,
+    currentHintIndex,
+    guess,
+    message,
+    gameOver,
+    isCorrect,
+    startNewGame,
+    handleGuess,
+    handleGiveUp,
+    setGuess,
+    handleBackspace,
+  } = useGameStore();
 
   useEffect(() => {
-    startNewGame();
-  }, []);
-
-  const startNewGame = () => {
-    const randomPokemon =
-      pokemonData[Math.floor(Math.random() * pokemonData.length)];
-    setCurrentPokemon(randomPokemon);
-    setCurrentHintIndex(0);
-    setGuess('');
-    setMessage('');
-    setGameOver(false);
-    setIsCorrect(false);
-  };
-
-  const handleGuess = () => {
-    if (guess.toLowerCase() === currentPokemon?.name.toLowerCase()) {
-      setMessage('Correct!');
-      setGameOver(true);
-      setIsCorrect(true);
-    } else {
-      setMessage('Nope, Try again!');
-      if (currentHintIndex < currentPokemon?.hints.length - 1) {
-        setCurrentHintIndex(currentHintIndex + 1);
-      }
-    }
-  };
-
-  const handleGiveUp = () => {
-    setMessage('Ha Ha! LOSER!');
-    setGameOver(true);
-  };
+    startNewGame(pokemonData);
+  }, [startNewGame]);
 
   const handleKeyPress = (key: string) => {
     if (gameOver) return;
@@ -63,12 +42,8 @@ export default function Index() {
     if (key === '←') {
       handleBackspace();
     } else if (guess.length < MAX_POKEMON_NAME_LENGTH) {
-      setGuess(prevGuess => prevGuess + key);
+      setGuess(guess + key);
     }
-  };
-
-  const handleBackspace = () => {
-    setGuess(prevGuess => prevGuess.slice(0, -1));
   };
 
   return (
@@ -117,7 +92,7 @@ export default function Index() {
               <>
                 <Button
                   text='Guess'
-                  onPress={handleGuess}
+                  onPress={() => handleGuess(guess)}
                   disabled={gameOver || guess.length === 0}
                 />
 
@@ -129,7 +104,10 @@ export default function Index() {
                 />
               </>
             ) : (
-              <Button text='Play Again' onPress={startNewGame} />
+              <Button
+                text='Play Again'
+                onPress={() => startNewGame(pokemonData)}
+              />
             )}
           </View>
 
